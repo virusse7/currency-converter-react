@@ -1,0 +1,9 @@
+.container {
+    font-family: "Lato" ,sans-serif;
+    padding-top: 100px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1000px;
+    background-color: hsl(0, 21%, 14%);
+    background-color: transparent;
+  }

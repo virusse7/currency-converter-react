@@ -1,0 +1,55 @@
+
+
+
+.fieldset {
+    background-color: black;
+    border: 5px double;
+    border-radius: 20px;
+    border-color: hsl(19, 58%, 45%);
+    color: hsl(0, 0%, 100%);
+  }
+  
+  .form__legend {
+    background-color: black;
+    border-radius: 20px;
+    text-align: left;
+    font-size: large;
+    border: 2px solid hsl(24, 98%, 68%);
+    padding: 10px;
+  }
+  
+  .form__selectCurrency {
+    padding: 4px;
+  }
+  
+  .form__amount {
+    padding: 4px;
+  }
+  
+  .form__convert {
+    border-style: none;
+    background-color: hsl(19, 68%, 58%);
+    width: 200px;
+    padding: 4px;
+  }
+  
+  .form__convert:hover {
+    background-color: hsl(19, 68%, 53%)
+  }
+  
+  .form__convert:active {
+    background-color: hsl(19, 68%, 45%)
+  }
+  
+  
+  
+  .form__result {
+    background-color: white;
+    color: rgb(27, 24, 24);
+    max-width: 400px;
+    margin-inline: auto;
+    padding: 10px;
+    font-size: large;
+    border: 2px solid hsl(19, 68%, 58%);
+  }
+  

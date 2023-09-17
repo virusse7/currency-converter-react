@@ -7,3 +7,8 @@
     padding: 4px;
     margin: 2px;
 }
+
+.labels {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}

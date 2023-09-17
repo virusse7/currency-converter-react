@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Footer = ({ title }) => (
+const Footer = ({ body }) => (
     <footer className="footer">
-        {title}
+        {body}
     </footer>
 );
 

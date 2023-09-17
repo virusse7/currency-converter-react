@@ -1,10 +1,10 @@
 
 import "./style.css";
 
-const Form = () => (
+const Form = ({ footer, legend }) => (
     <form className="form js-form">
         <fieldset className="fieldset">
-            <legend className="form__legend">Kalkulator walutowy</legend>
+            {legend}
             <p>
                 <label>
                     Wprowadź kwotę w zł żeby przewalutować:
@@ -28,7 +28,7 @@ const Form = () => (
             <p>
                 <button className="fieldset__convert">Przelicz</button>
             </p>
-
+            {footer}
 
         </fieldset>
     </form>

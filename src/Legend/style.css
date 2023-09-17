@@ -1,0 +1,8 @@
+.legend {
+    background-color: black;
+    border-radius: 20px;
+    text-align: left;
+    font-size: large;
+    border: 2px solid hsl(24, 98%, 68%);
+    padding: 10px;
+  }

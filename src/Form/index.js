@@ -4,6 +4,7 @@ import Label from "../Label";
 import Footer from "../Footer";
 import Button from "../Button";
 import Result from "../Result";
+import { useState } from "react";
 
 
 const Form = () => {
@@ -11,6 +12,15 @@ const Form = () => {
     event.preventDefault();
   };
 
+  const [amount, setAmount] = useState("");
+
+  const currencies = [
+    { name: "EUR", value: 4.46, label: "Euro" },
+    { name: "USD", value: 4.01, label: "Dolar Amerykański" },
+    { name: "ARS", value: 0.015, label: "Peso Argentyńskie" },
+  ];
+
+  const [selectedOption, setSelectedOption] = useState("");
 
   return (
     <form className="form" onSubmit={onFormSubmit} >
@@ -21,7 +31,10 @@ const Form = () => {
           <Label
             text="Wprowadź kwotę w zł żeby przewalutować: "
             body={
-              <input className="label__amount"
+              <input
+                className="label__amount"
+                value={amount}
+                onChange={({ target }) => setAmount(target.value)}
                 name="amount"
                 required
                 placeholder="0 zł"
@@ -36,12 +49,11 @@ const Form = () => {
             text="Wybierz walutę: "
             body={
               <select
+                options={currencies}
+                value={selectedOption}
+                onChange={setSelectedOption}
                 className="label__selectCurrency"
-                name="selectCurrency"
               >
-                <option value="EUR">Euro</option>
-                <option value="USD">Dolar</option>
-                <option value="ARS">Peso argentyńskie</option>
               </select>
             }
           />

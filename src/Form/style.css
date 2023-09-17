@@ -1,6 +1,4 @@
 
-
-
 .fieldset {
     background-color: black;
     border: 5px double;
@@ -11,38 +9,5 @@
   
 
   
-  .form__selectCurrency {
-    padding: 4px;
-  }
-  
-  .form__amount {
-    padding: 4px;
-  }
-  
-  .form__convert {
-    border-style: none;
-    background-color: hsl(19, 68%, 58%);
-    width: 200px;
-    padding: 4px;
-  }
-  
-  .form__convert:hover {
-    background-color: hsl(19, 68%, 53%)
-  }
-  
-  .form__convert:active {
-    background-color: hsl(19, 68%, 45%)
-  }
-  
-  
-  
-  .form__result {
-    background-color: white;
-    color: rgb(27, 24, 24);
-    max-width: 400px;
-    margin-inline: auto;
-    padding: 10px;
-    font-size: large;
-    border: 2px solid hsl(19, 68%, 58%);
-  }
+
   

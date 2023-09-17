@@ -1,0 +1,14 @@
+.button {
+    border-style: none;
+    background-color: hsl(19, 68%, 58%);
+    width: 200px;
+    padding: 4px;
+  }
+  
+  .button:hover {
+    background-color: hsl(19, 68%, 53%)
+  }
+  
+  .button:active {
+    background-color: hsl(19, 68%, 45%)
+  }

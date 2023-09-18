@@ -1,4 +1,27 @@
 .selectCurrency {
-    padding: 4px;
-    margin: 2px;
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
+}
+.selectContainer__input {
+    width: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.result {
+    background-color: white;
+    color: rgb(27, 24, 24);
+    max-width: 350px;
+    margin-inline: auto;
+    padding: 10px;
+    font-size: large;
+    border: 2px solid hsl(19, 68%, 58%);
+}
+
+.selectContainer {
+    width: 350px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
 }

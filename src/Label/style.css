@@ -3,7 +3,7 @@
     margin: 2px;
 }
 
-.labels {
+.label {
     display: grid;
     grid-template-rows: 1fr 1fr;
 }

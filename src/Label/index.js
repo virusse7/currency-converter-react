@@ -1,8 +1,8 @@
 import "./style.css";
 
-const Label = ({ text, body }) => (
+const Label = ({ body }) => (
     <label>
-        {text}
+        <p>Wybierz walutę, którą chcesz przewalutować:</p>
         {body}
     </label>
 );

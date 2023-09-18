@@ -4,6 +4,7 @@ import Label from "../Label";
 import Footer from "../Footer";
 import Button from "../Button";
 import Result from "../Result";
+import CurrencySelect from "../CurrencySelect";
 import { useState } from "react";
 
 
@@ -13,14 +14,6 @@ const Form = () => {
   };
 
   const [amount, setAmount] = useState("");
-
-  const currencies = [
-    { name: "EUR", value: 4.46, label: "Euro" },
-    { name: "USD", value: 4.01, label: "Dolar Amerykański" },
-    { name: "ARS", value: 0.015, label: "Peso Argentyńskie" },
-  ];
-
-  const [selectedOption, setSelectedOption] = useState("");
 
   return (
     <form className="form" onSubmit={onFormSubmit} >
@@ -47,15 +40,7 @@ const Form = () => {
           />
           <Label
             text="Wybierz walutę: "
-            body={
-              <select
-                options={currencies}
-                value={selectedOption}
-                onChange={setSelectedOption}
-                className="label__selectCurrency"
-              >
-              </select>
-            }
+            body={<CurrencySelect />}
           />
         </div>
         <Result />

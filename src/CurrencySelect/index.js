@@ -14,21 +14,17 @@ const CurrencySelect = ({ onCurrencyChange, selectedCurrency }) => {
 
 
     return (
-        <>
-            <div className="selectContainer">
-                <select
-                    className="selectCurrency"
-                    value={selectedCurrency}
-                    onChange={currencyChange}
-                >
-                    {currencies.map((currency) => (
-                        <option value={currency.label} key={currency.label}>
-                            {currency.name}
-                        </option>
-                    ))};
-                </select>
-            </div>
-        </>
+        <select
+            className="selectCurrency"
+            value={selectedCurrency}
+            onChange={currencyChange}
+        >
+            {currencies.map((currency) => (
+                <option value={currency.label} key={currency.label}>
+                    {currency.name}
+                </option>
+            ))};
+        </select>
     );
 };
 

@@ -10,3 +10,8 @@
     align-items: center;
     flex-direction: column;
 }
+
+.resultContainer__result {
+    font-size: large;
+    font-weight: 700
+}

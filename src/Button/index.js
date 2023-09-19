@@ -1,5 +1,8 @@
 import "./style.css";
-const Button = ({ text, convertCurrency }) => (
-    <button onClick={convertCurrency} className="button">{text}</button>
-);
+const Button = ({ text, convertCurrency }) => {
+    return (
+
+        <button onClick={convertCurrency} className="button">{text}</button>
+    )
+};
 export default Button;

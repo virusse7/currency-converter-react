@@ -41,7 +41,7 @@ const Form = () => {
 
     const selectedCurrencyValue = currencies.find((currency) => currency.label === selectedOption)?.value;
 
-    const convertedResult = (selectedCurrencyValue / amount);
+    const convertedResult = (amount * selectedCurrencyValue);
 
     setResult(convertedResult.toFixed(2));
   };
@@ -53,9 +53,10 @@ const Form = () => {
       <fieldset className="fieldset">
         <legend className="fieldset__legend">Kalkulator walutowy</legend>
         <label className="label">
-          <p>Wybierz walutę którą chcesz przewalutować:</p>
+          <p className="label__paragraph">Wybierz walutę którą chcesz przewalutować:</p>
           <CurrencySelect onCurrencyChange={handleCurrencyChange} setResult={setResult} />
           <div className="label__container">
+            <p className="label__paragraph">Wpisz kwotę do przewalutowania w zł</p>
             <input
               className="label__amount"
               value={amount}
@@ -66,7 +67,7 @@ const Form = () => {
               placeholder="0 zł"
               type="number"
               step="0.01"
-              min="0.01"
+              min="1"
               max="100000"
             />
             <button onClick={convertCurrency} className="label__button">Przelicz!</button>

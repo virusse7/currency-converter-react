@@ -2,17 +2,20 @@
     width: 160px;
     margin: 0 auto;
     text-align: center;
+    background-color: hsl(0, 0%, 85%);
+    border-radius: 10px;
 }
 .selectContainer__input {
-    width: 100px;
+    background-color: hsl(0, 0%, 85%);
+    width: 160px;
     text-align: center;
     margin: 0 auto;
 }
 
 .result {
-    background-color: white;
+    background-color: hsl(0, 0%, 85%);
     color: rgb(27, 24, 24);
-    max-width: 350px;
+    max-width: 200px;
     margin-inline: auto;
     padding: 10px;
     font-size: large;
@@ -22,6 +25,4 @@
 .selectContainer {
     width: 350px;
     margin: 0 auto;
-    display: grid;
-    justify-content: center;
 }

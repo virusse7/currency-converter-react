@@ -15,8 +15,45 @@
   justify-content: center;
   gap: 5px;
 }
-  
 
-  
+.fieldset__footer {
+  color: #fff;
+  text-align: right;
+}
+
+.fieldset__legend {
+  background-color: black;
+  border-radius: 20px;
+  text-align: left;
+  font-size: large;
+  border: 2px solid hsl(24, 98%, 68%);
+  padding: 10px;
+}
+
+
+.label__amount {
+  text-align: center;
+  border-radius: 50px;
+  background-color: hsl(0, 0%, 85%);
+  padding: 4px;
+  margin: 2px;
+}
+
+.label__button {
+  border-style: none;
+  border-radius: 10px;
+  background-color: hsl(19, 68%, 58%);
+  width: 200px;
+  padding: 4px;
+  transition: 1s;
+}
+
+.label__button:hover {
+  background-color: hsl(19, 68%, 53%)
+}
+
+.label__button:active {
+  background-color: hsl(19, 68%, 45%)
+}
 
   

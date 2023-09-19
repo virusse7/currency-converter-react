@@ -1,16 +1,15 @@
 import "./style.css";
-import { useState } from "react";
 
-const CurrencySelect = ({ setResult }) => {
+const CurrencySelect = ({ onCurrencyChange, selectedCurrency }) => {
     const currencies = [
         { label: "EUR", value: 0.23, name: "Euro" },
         { label: "USD", value: 0.25, name: "Dolar Amerykański" },
         { label: "ARS", value: 66.67, name: "Peso Argentyńskie" },
     ];
 
-    const [selectedOption, setSelectedOption] = useState("EUR");
     const currencyChange = (event) => {
-        setSelectedOption(event.target.value);
+        const newCurrency = event.target.value;
+        onCurrencyChange(newCurrency);
     };
 
 
@@ -19,7 +18,7 @@ const CurrencySelect = ({ setResult }) => {
             <div className="selectContainer">
                 <select
                     className="selectCurrency"
-                    value={selectedOption}
+                    value={selectedCurrency}
                     onChange={currencyChange}
                 >
                     {currencies.map((currency) => (

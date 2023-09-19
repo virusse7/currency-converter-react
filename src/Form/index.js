@@ -11,13 +11,7 @@ const Form = () => {
   const [result, setResult] = useState(0);
   const [amount, setAmount] = useState("");
   const [selectedOption, setSelectedOption] = useState("EUR");
-
-
-  const currencies = [
-    { label: "EUR", value: 0.23, name: "Euro" },
-    { label: "USD", value: 0.25, name: "Dolar Amerykański" },
-    { label: "ARS", value: 66.67, name: "Peso Argentyńskie" },
-  ];
+  const [resetResult, setResetResult] = useState(true);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -26,26 +20,40 @@ const Form = () => {
 
   const handleAmountChange = (newAmount) => {
     setAmount(newAmount);
-  };
-  const handleCurrencyChange = (newCurrency) => {
-    setSelectedOption(newCurrency);
+    setResetResult(false);
   };
 
-  const convertCurrency = (convertedResult) => {
-    const selectedCurrencyValue = currencies.find((currency) => currency.label === selectedOption)?.value;
-    if (selectedCurrencyValue !== undefined) {
-      const convertedResult = (parseFloat(amount) / selectedCurrencyValue).toFixed(2);
-      setResult(convertedResult);
-    } else {
-      setResult("Wybierz poprawną walutę"); // Możesz dodać obsługę błędu, gdy wybrana waluta jest nieznana
+  const handleAmountFocus = () => {
+    if (amount === 0) {
+      setAmount("");
     };
-    return convertedResult;
+  };
+
+  const handleCurrencyChange = (newCurrency) => {
+    setSelectedOption(newCurrency);
+    setAmount(0);
+    setResetResult(true);
+    setResult(0);
+  };
+
+  const convertCurrency = () => {
+    const currencies = [
+      { label: "EUR", value: 0.23, name: "Euro" },
+      { label: "USD", value: 0.25, name: "Dolar Amerykański" },
+      { label: "ARS", value: 66.67, name: "Peso Argentyńskie" },
+    ];
+
+    const selectedCurrencyValue = currencies.find((currency) => currency.label === selectedOption)?.value;
+
+    const convertedResult = (parseFloat(amount) / selectedCurrencyValue).toFixed(2);
+
+    setResult(convertedResult);
   };
 
 
 
   return (
-    <form currencies={currencies} className="form" onSubmit={onFormSubmit} >
+    <form className="form" onSubmit={onFormSubmit} >
       <fieldset className="fieldset">
         <Legend legend="Kalkulator walutowy" />
         <Label
@@ -57,6 +65,7 @@ const Form = () => {
             className="label__amount"
             value={amount}
             onChange={(event) => handleAmountChange(event.target.value)}
+            onFocus={handleAmountFocus}
             name="amount"
             required
             placeholder="0 zł"
@@ -67,7 +76,7 @@ const Form = () => {
           />
           <Button convertCurrency={convertCurrency} text="Przelicz!" />
         </div>
-        <Result result={result} />
+        <Result result={result} selectedCurrency={selectedOption} />
         <Footer body="Kursy walut z dnia 23.07.23" />
       </fieldset>
     </form>

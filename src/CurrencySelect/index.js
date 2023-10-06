@@ -1,4 +1,4 @@
-import "./style.css";
+import { Select } from "./styled";
 
 const CurrencySelect = ({ onCurrencyChange, selectedCurrency }) => {
     const currencies = [
@@ -14,8 +14,7 @@ const CurrencySelect = ({ onCurrencyChange, selectedCurrency }) => {
 
 
     return (
-        <select
-            className="selectCurrency"
+        <Select
             value={selectedCurrency}
             onChange={currencyChange}
         >
@@ -24,7 +23,7 @@ const CurrencySelect = ({ onCurrencyChange, selectedCurrency }) => {
                     {currency.name}
                 </option>
             ))};
-        </select>
+        </Select>
     );
 };
 

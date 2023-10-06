@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from "react";
-import "./style.css";
+import { useEffect, useState } from "react";
+import { Div } from "./styled";
 
 export const Clock = () => {
     const [date, setDate] = useState(new Date());
@@ -25,10 +25,10 @@ export const Clock = () => {
 
 
     return (
-        <div className="clock">
+        <Div>
             Dzisiaj jest
             {" "}
             {formatDate(date)}
-        </div>
+        </Div>
     )
 };

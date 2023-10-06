@@ -1,8 +1,8 @@
-import "./style.css";
 import CurrencySelect from "../CurrencySelect";
 import { useState } from "react";
 import Result from "../Result";
 import { Clock } from "../Clock";
+import { Legend, Footer, Button, Fieldset, InputAmount, Content, Div } from "./styled";
 
 const Form = () => {
   const [result, setResult] = useState(0);
@@ -50,18 +50,25 @@ const Form = () => {
 
 
   return (
-    <form className="form" onSubmit={onFormSubmit} >
-
-      <fieldset className="fieldset">
-        <legend className="fieldset__legend">Kalkulator walutowy</legend>
+    <form onSubmit={onFormSubmit} >
+      <Fieldset>
+        <Legend>
+          Kalkulator walutowy
+        </Legend>
         <Clock />
-        <label className="label">
-          <p className="label__paragraph">Wybierz walutę którą chcesz przewalutować:</p>
-          <CurrencySelect onCurrencyChange={handleCurrencyChange} setResult={setResult} />
-          <div className="label__container">
-            <p className="label__paragraph">Wpisz kwotę do przewalutowania w zł</p>
-            <input
-              className="label__amount"
+        <label>
+          <Content>
+            Wybierz walutę którą chcesz przewalutować:
+          </Content>
+          <CurrencySelect
+            onCurrencyChange={handleCurrencyChange}
+            setResult={setResult}
+          />
+          <Div>
+            <Content>
+              Wpisz kwotę do przewalutowania w zł
+            </Content>
+            <InputAmount
               value={amount}
               onChange={(event) => handleAmountChange(event.target.value)}
               onFocus={handleAmountFocus}
@@ -73,12 +80,21 @@ const Form = () => {
               min="1"
               max="100000"
             />
-            <button onClick={convertCurrency} className="label__button">Przelicz!</button>
-          </div>
+            <Button
+              onClick={convertCurrency}
+            >
+              Przelicz!
+            </Button>
+          </Div>
         </label>
-        <Result result={result} selectedCurrency={selectedOption} />
-        <footer className="fieldset__footer">Kursy walut z dnia 23.07.23</footer>
-      </fieldset>
+        <Result
+          result={result}
+          selectedCurrency={selectedOption}
+        />
+        <Footer>
+          Kursy walut z dnia 23.07.23
+        </Footer>
+      </Fieldset>
     </form>
   );
 };

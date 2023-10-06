@@ -1,11 +1,11 @@
-import "./style.css";
+import { ResultContainer, ResultText } from "./styled";
 
 const Result = ({ result, selectedCurrency }) => {
     return (
-        <div className="resultContainer">
+        <ResultContainer>
             <h2>Po przewalutowaniu otrzymasz:</h2>
-            <p className="resultContainer__result">{result} {selectedCurrency}</p>
-        </div>
+            <ResultText>{result} {selectedCurrency}</ResultText>
+        </ResultContainer>
     );
 };
 

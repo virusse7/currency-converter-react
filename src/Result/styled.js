@@ -1,4 +1,6 @@
-.resultContainer {
+import styled from "styled-components";
+
+export const ResultContainer = styled.div`
     border: 2px solid black;
     border-radius: 10px;
     color: black;
@@ -9,11 +11,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+`;
 
-.resultContainer__result {
+export const ResultText = styled.p`
     font-size: large;
     font-weight: 700;
     margin: 0;
     padding-bottom: 20px;
-}
+`;

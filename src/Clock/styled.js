@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Div = styled.div`
+export const StyledClock = styled.div`
     text-align: right;
     color: rgb(248, 237, 237);
     font-family: monospace;

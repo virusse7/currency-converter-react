@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.693cf676.css","mappings":"AAAA,KACE,qBACF,CAEA,iBACE,kBACF,CAEA,KACI,qGACJ","sources":["index.css"],"sourcesContent":["html {\r\n  box-sizing: border-box;\r\n}\r\n\r\n*, ::after, ::before {\r\n  box-sizing: inherit;\r\n}\r\n\r\nbody {\r\n    background-image: url(\"./images/backgroundImage.jpg\");\r\n}"],"names":[],"sourceRoot":""}

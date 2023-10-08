@@ -7,6 +7,6 @@ export const Main = styled.main`
     text-align: center;
     max-width: 1000px;
     width: 100%;
-    background-color: hsl(0, 21%, 14%);
+    background-color: ${({ theme }) => theme.color.CocoaBrown};
     background-color: transparent;
 `;

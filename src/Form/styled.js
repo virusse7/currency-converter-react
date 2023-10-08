@@ -1,48 +1,48 @@
 import styled from "styled-components";
 
 export const Legend = styled.legend`
-  background-color: black;
+  background-color: ${({ theme }) => theme.color.Black};
   border-radius: 20px;
   text-align: left;
   font-size: large;
-  border: 2px solid hsl(24, 98%, 68%);
+  border: 2px solid ${({ theme }) => theme.color.Orange};
   padding: 10px;
 `;
 
 export const Footer = styled.footer`
-  color: #fff;
+  color: ${({ theme }) => theme.color.White};
   text-align: right;
 `;
 
 export const Button = styled.button`
   border-style: none;
   border-radius: 10px;
-  background-color: hsl(19, 68%, 58%);
+  background-color: ${({ theme }) => theme.color.RedDamask};
   width: 250px;
   padding: 4px;
   margin: 2px;
   transition: 1s;
 
   &:active {
-    background-color: hsl(19, 68%, 45%)
+    background-color: ${({ theme }) => theme.color.Piper};
   }
   &:hover {
-    background-color: hsl(19, 68%, 53%)
+    background-color: ${({ theme }) => theme.color.OrangeDamask};
   }
 `;
 
 export const Fieldset = styled.fieldset`
-    background-color: black;
+    background-color: ${({ theme }) => theme.color.Black};
     border: 5px double;
     border-radius: 20px;
-    border-color: hsl(19, 58%, 45%);
-    color: hsl(0, 0%, 100%);
+    border-color: ${({ theme }) => theme.color.Tuscany};
+    color: ${({ theme }) => theme.color.White};
 `;
 
 export const InputAmount = styled.input`
   text-align: center;
   border-radius: 50px;
-  background-color: hsl(0, 0%, 85%);
+  background-color: ${({ theme }) => theme.color.Alto};
   padding: 4px;
   margin: 2px;
   width: 250px;

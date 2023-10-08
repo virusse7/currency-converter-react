@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const ResultContainer = styled.div`
-    border: 2px solid black;
+    border: 2px solid ${({ theme }) => theme.color.Black};
     border-radius: 10px;
-    color: black;
-    background-color: hsl(0, 0%, 85%);
+    color: ${({ theme }) => theme.color.Black};
+    background-color: ${({ theme }) => theme.color.Alto};
     max-width: 500px;
     margin: 0 auto;
     display: flex;

@@ -4,6 +4,6 @@ export const Select = styled.select`
     width: 160px;
     margin: 0 auto;
     text-align: center;
-    background-color: hsl(0, 0%, 85%);
+    background-color: ${({ theme }) => theme.color.Alto};
     border-radius: 10px;
 `;

@@ -60,3 +60,11 @@ export const Div = styled.div`
   justify-content: center;
   gap: 5px;
 `;
+
+export const Failure = styled.p`
+  ${({ theme }) => theme.color.Red};
+`;
+
+export const Loading = styled.p`
+  ${({ theme }) => theme.color.White};
+`;

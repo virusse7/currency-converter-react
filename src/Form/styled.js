@@ -68,3 +68,11 @@ export const Failure = styled.p`
 export const Loading = styled.p`
   ${({ theme }) => theme.color.White};
 `;
+
+export const Select = styled.select`
+    width: 160px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: ${({ theme }) => theme.color.Alto};
+    border-radius: 10px;
+`;

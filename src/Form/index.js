@@ -37,14 +37,14 @@ const Form = () => {
   };
 
 
-  const calculateResult = (currency, amount) => {
+  const calculateResult = (data, amount) => {
 
-    const rate = ratesData.rates[currency];
+    const rate = ratesData.data;
 
     setResult({
       sourceAmount: +amount,
       targetAmount: amount * rate,
-      currency,
+      data,
     });
   };
 
@@ -73,10 +73,10 @@ const Form = () => {
                     Wybierz walutę którą chcesz przewalutować:
                   </Content>
                   <Select
-                    value={currency}
+                    value={selectedOption}
                     onChange={({ target }) => handleCurrencyChange(target.value)}
                   >
-                    {!!ratesData.rates && Object.keys(ratesData.rates).map((currency) => (
+                    {!!ratesData.rates && Object.keys(ratesData.data).map((currency) => (
                       <option key={currency} value={currency}>
                         {currency}
                       </option>

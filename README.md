@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Live site URl: [click here](https://virusse7.github.io/currency-converter-react/).
+Live site URL: [click here](https://virusse7.github.io/currency-converter-react/).
 
 ## Description
 

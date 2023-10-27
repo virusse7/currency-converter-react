@@ -37,14 +37,14 @@ const Form = () => {
   };
 
 
-  const calculateResult = (data, amount) => {
+  const calculateResult = (currency, amount) => {
 
-    const rate = ratesData.data;
+    const rate = ratesData.data[currency].value;
 
     setResult({
       sourceAmount: +amount,
       targetAmount: amount * rate,
-      data,
+      currency,
     });
   };
 
